@@ -1,0 +1,20 @@
+<style >
+    .roll{font-size: 72px; color: brown; background-color: burlywood; }
+    
+</style>
+<a href="javascript:void(0)" onclick="roll()" class="roll" >LET'S PLAY </a>
+<br>
+<br>
+<br>
+
+<div id="result" ></div>
+<script>
+    function roll(){
+        document.getElementById('result').innerHTML="<img src='image/loader.gif'/>";
+        setTimeout(function(){
+            var rand=Math.floor(Math.random()*6)+1;
+            document.getElementById('result').innerHTML="<img src='image/"+rand+".png'/>";
+        },600);
+        
+    }
+</script>
